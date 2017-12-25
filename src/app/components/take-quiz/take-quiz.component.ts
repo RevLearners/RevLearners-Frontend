@@ -1,16 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
 import {QuestionService} from "../../services/question.service";
+import {ActivatedRoute} from "@angular/router";
 import {Quiz} from "../../model/quiz";
 
 @Component({
-    selector: 'app-review-quiz',
-    templateUrl: './review-quiz.component.html',
-    styleUrls: ['./review-quiz.component.css']
+    selector: 'app-take-quiz',
+    templateUrl: './take-quiz.component.html',
+    styleUrls: ['./take-quiz.component.css']
 })
-export class ReviewQuizComponent implements OnInit {
+export class TakeQuizComponent implements OnInit {
 
     quiz: Quiz;
+
     constructor(private questionService: QuestionService, private activatedRoute: ActivatedRoute) {
         this.activatedRoute.params.subscribe(params => {
             console.log(params);
@@ -24,5 +25,5 @@ export class ReviewQuizComponent implements OnInit {
 
     ngOnInit() {
     }
-
 }
+
