@@ -50,4 +50,12 @@ export class NewQuestionComponent implements OnInit {
             () => this.router.navigate(['/home'])
         )
     }
+
+    selectOption(option: QuestionOption) {
+        for (let opt of this.newQuestion.options) {
+            opt.isCorrect = false;
+        }
+        option.isCorrect = true;
+        console.log(this.newQuestion);
+    }
 }
