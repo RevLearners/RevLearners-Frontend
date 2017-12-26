@@ -5,10 +5,10 @@ import {Quiz} from "../../model/quiz";
 
 @Component({
     selector: 'app-review-quiz',
-    templateUrl: './review-quiz.component.html',
-    styleUrls: ['./review-quiz.component.css']
+    templateUrl: './review-challenge.component.html',
+    styleUrls: ['./review-challenge.component.css']
 })
-export class ReviewQuizComponent implements OnInit {
+export class ReviewChallengeComponent implements OnInit {
 
     quiz: Quiz;
     constructor(private questionService: QuestionService, private activatedRoute: ActivatedRoute) {
